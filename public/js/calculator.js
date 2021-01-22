@@ -19,6 +19,7 @@ Calculator.prototype.multiply = function(number){
 
 Calculator.prototype.divide = function(number){
   this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+  if (this.runningTotal == "Infinity") {this.runningTotal = "Error"} // added to catch division by zero
 }
 
 Calculator.prototype.numberClick = function(number){
